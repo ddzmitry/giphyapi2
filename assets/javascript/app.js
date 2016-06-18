@@ -23,6 +23,11 @@ var horror = ['Halloween', 'The Shining', 'Saw', 'Texas Chainsaw Massacre', 'Hum
 					var animate = results[i].images.fixed_height.url;
 
 					var giphyDiv = $('<div>');
+
+					var giphyRating = $('<p> Rating:' + results[i].rating + '</p>')
+					giphyDiv.append(giphyRating);
+					$('#addRating').append(giphyDiv);
+
 					var giphyImage = $('<img>', {
 						class: 'image',
 						src: still
@@ -35,8 +40,6 @@ var horror = ['Halloween', 'The Shining', 'Saw', 'Texas Chainsaw Massacre', 'Hum
 			$('.image').on('click', function() {
 				var state = $(this).attr('data-state');
 				console.log(state);
-				console.log(still);
-				console.log(animate);
             if (state === 'still') {
             	$(this).attr('src', $(this).data('animate'));
             	$(this).attr('data-state', 'animate');
