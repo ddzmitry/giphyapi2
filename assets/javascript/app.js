@@ -22,7 +22,7 @@ var horror = ['Halloween', 'The Shining', 'Saw', 'Texas Chainsaw Massacre', 'Hum
 					var still = results[i].images.fixed_height_still.url;
 					var animate = results[i].images.fixed_height.url;
 
-					var giphyDiv = $('<div>');
+					var giphyDiv = $('<div class = "giphyDiv">');
 
 					var giphyRating = $('<p> Rating:' + results[i].rating + '</p>')
 					giphyDiv.append(giphyRating);
