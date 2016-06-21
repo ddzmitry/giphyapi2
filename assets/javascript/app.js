@@ -69,9 +69,10 @@ var horror = ['Halloween', 'The Shining', 'Saw', 'Texas Chainsaw Massacre', 'Hum
 		}
 	}
 	$('#giphyAdd').on('click', function() {//creating a function for the onclick, adding buttons
-			var input = $('#giphyInput').val().trim();//getting the value of the input, while removing some text with the .trim()
+			var input = $("#giphyInput").val().trim();//getting the value of the input, while removing some text with the .trim()
 			horror.push(input);//pushing the inputs to the horror array
 			addButtons();//incorporating the buttons when added to be appended to the buttons already on the page
+			$("#giphyInput").val("");
 			return false; // We have this line so that users can hit "enter" instead of clicking on ht button and it won't move to the next page
 		});
 
